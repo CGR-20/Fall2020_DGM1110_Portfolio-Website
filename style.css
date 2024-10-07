@@ -1,0 +1,352 @@
+/* 
+CSS File - Table of Contents
+* CSS reset
+* Natural box layout
+* Important elements (ordered by page layout)
+* Individual and grouped elements (ordered by most complicated to least)
+* Media queries (ordered by largest screen size to smallest)
+*/
+
+/* CSS reset */
+h1, h2, p, main, body, figure.galleryItem, div, iframe
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* natural box layout */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Main and other important elements */
+body
+{
+    background-color: #445BC1;
+    background-image: url(images/website_background.gif);
+    background-repeat: repeat-x;
+}
+
+div.page
+{
+    max-width: 90%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 20px #404040;
+}
+
+header
+{
+    background-color: white;
+    padding: 1%;
+    text-align: center;
+}
+
+    header h1
+    {
+        font-size: 6vw;
+    }
+
+nav
+{
+    background-color: white;
+    overflow: hidden;
+    padding: 1%;
+}
+
+    nav a
+    {
+        text-align: center;
+        text-decoration: none;
+        padding:inherit;
+        margin: 0 0.5%;
+        color: #2C43B8;
+        width: 24%;
+        float: left;
+    }
+
+    nav a:hover
+    {
+        background-color: #97BAEC;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    nav a.active
+    {
+        background-color: #2C43B8;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+main
+{
+    background-color: white;
+    padding-bottom: 1%;
+}
+
+    main h2:first-of-type
+    {
+        padding-top: 1%;
+    }
+
+    main h2, p
+    {
+        padding: 0 0 1% 1%;
+    }
+
+footer
+{
+    color: white;
+    padding-top: 1%;
+}
+
+div.demo
+{
+    padding-top: 2%;
+}
+
+    div.demo iframe
+    {
+        width: 65vw;
+        height: calc(65vw * 0.56);
+        margin: auto;
+        display: block; 
+    }
+
+figure.aboutImg
+{
+    background-color: #2C43B8;
+    padding: 2%;
+    margin: 2%;
+    float: right;
+    width: 40%;
+}
+
+    div.imgCont
+    {
+        padding: 3.5%;
+        background-color: white;
+    }
+
+        figure.aboutImg img
+        {
+            width: 100%;
+            box-shadow: 5px 5px 10px #808080;
+        }
+
+figure
+{
+    text-align: center;
+}
+
+div.workGallery
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 3%;
+    width: 90%;
+    background-color: #2C43B8;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+    div.workGallery figure
+    { 
+        background-color: white;
+        padding: 1%;
+        margin: auto;
+        width: 30%;
+    }
+    
+    div.workGallery figure img
+    {
+        width: 100%;
+    }
+
+div.mediaGallery
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 3%;
+    width: 90%;
+    background-color: #2C43B8;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+    div.mediaGallery iframe
+    {
+        display: block;
+        padding: 1%;
+        width: 39vw;
+        height: calc(39vw * 0.56);
+    }
+
+div.endFloat
+{
+    clear: both;
+}
+
+/* Individual and grouped elements */
+
+figure.aboutImg, div.gallery
+{
+    background-color: #445BC1;
+}
+
+h1, h2, a, p
+{
+    font-family: 'Exo 2';
+}
+
+h1
+{
+    color: #2C43B8;
+}
+
+h2
+{
+    color: #445BC1;
+}
+
+a:hover
+{
+    color: #BBDFFA;
+    font-weight: bold;
+}
+
+/* Media queries for different screen sizes */
+
+/* large tablet */
+@media only screen and (max-width: 991px)
+{
+    div.mediaGallery iframe
+    {
+        width: 38vw;
+        height: calc(38vw * 0.56);
+    }
+}
+
+/* medium tablet */
+@media only screen and (max-width: 767px)
+{ 
+    nav a
+    {
+        width: 49%;
+        color: #2C43B8;
+        background-color: white;
+        border: 2px solid #2C43B8;
+        margin: 0.5%;
+    }
+    
+        nav a:hover
+        {
+            border: 2px solid #97BAEC;
+        }
+
+    main h2
+    {
+        font-size: 15pt;
+        margin-top: 15px;
+    }
+    
+    main h2, p
+    {
+        padding: 0 0 1.5% 1.5%;
+    }
+    
+    nav a, nav a.active, nav a:hover, div.gallery
+    {
+        border-radius: 5px;
+    }
+    
+    div.demo iframe
+    {
+        width: 85vw;
+        height: calc(85vw * 0.56);
+    }
+    
+    figure.aboutImg
+    {
+        width: 50%;
+    }
+    
+    div.workGallery
+    {
+        padding: 2%;
+    }
+        
+        div.workGallery figure
+        {
+            width: 46%;
+            margin: 2%;
+        }
+    
+    div.mediaGallery iframe
+    {
+        width: 100vw;
+        height: calc(100vw * 0.56);
+    }
+    
+    p
+    {
+        margin-right: 10px;
+    }
+}
+
+/* phone */
+@media only screen and (max-width: 479px)
+{
+    nav a
+    {
+        display: block;
+        float: none;
+        text-align: center;
+        text-decoration: none;
+        padding:inherit;
+        margin: 2% 0;
+        color: #2C43B8;
+        background-color: white;
+        border: 2px solid #2C43B8;
+        width: 100%;
+    }
+    
+        nav a:hover
+        {
+            border: 2px solid #97BAEC;
+        }
+    
+    main h2
+    {
+        font-size: 15pt;
+        margin-top: 15px;
+    }
+    
+    div.demo iframe
+    {
+        width: 88vw;
+        height: calc(88vw * 0.56);
+    }
+    
+    figure.aboutImg
+    {
+        float: none;
+        width: 90%;
+        margin: auto;
+    }
+    
+    div.workGallery figure
+    {
+        width: 95%;
+    }
+    
+    div.mediaGallery iframe
+    {
+        width: 100vw;
+        height: calc(100vw * 0.56);
+    }
+}
