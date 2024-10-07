@@ -10,20 +10,8 @@ Environment: Ubuntu
 
 ---
 
-Project from UVU Fall 2020 DGM 1110 that presents works created in the class via a personally design website using HTML and CSS
+Project from UVU Fall 2020 DGM 1110 that presents course work created in the class via a personally design website using HTML and CSS
 
 ---
 
-The entire project process can be run via shell 
-in the command line by executing the following shell files in this order
-```
-sh build.sh
-sh execute.sh
-```
-
----
-
-System/Native dependencies (must be installed):
-* cmake 3.22.1
-* GNU Make 4.3
-* gcc (or g++) 11.4.0
+The website can be found at: https://cgr-20.github.io/Fall2020_DGM1110_Portfolio-Website/
